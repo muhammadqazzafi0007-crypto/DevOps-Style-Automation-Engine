@@ -1,0 +1,18 @@
+tasks:
+  - name: "send_daily_report"
+    type: "email"
+    schedule: "every 10 minutes"
+    enabled: true
+    details:
+      to: "qazzafi16@gmail.com"
+      subject: "Daily Report"
+      body: "Today's report attached"
+  
+  - name: "process_uploads"
+    type: "file"
+    schedule: "every 5 minutes"
+    enabled: true
+    details:
+      watch_folder: "incoming/"
+      action: "move"
+      destination: "processed/"

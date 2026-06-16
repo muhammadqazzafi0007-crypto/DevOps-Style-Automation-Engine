@@ -16,3 +16,12 @@ tasks:
       watch_folder: "incoming/"
       action: "move"
       destination: "processed/"
+      
+  - name: "send_daily_report"
+    type: "email"
+    schedule: "every 30 seconds"     # testing ke liye chhota
+    enabled: true
+    details:
+      to: "qazzafi16@gmail.com"
+      subject: "Scheduler Test"
+      body: "Scheduler ne yeh khud bheja!"
